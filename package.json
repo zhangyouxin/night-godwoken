@@ -1,0 +1,10 @@
+{
+  "name": "proxy-erc20",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@ckb-lumos/lumos": "^0.17.0",
+    "axios": "^0.27.2"
+  }
+}

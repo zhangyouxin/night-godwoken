@@ -1,0 +1,10 @@
+{
+  "v1": {
+    "rollupTypeHash": "0x702359ea7f073558921eb50d8c1c77e92f760c8f8656bde4995f26b8963e2dd8",
+    "l2ProxyErc20CodeHash": "0xb6176a6170ea33f8468d61f934c45c57d29cdc775bcd3ecaaec183f04b9f33d9"
+  },
+  "v0": {
+    "rollupTypeHash": "0x4cc2e6526204ae6a2e8fcf12f7ad472f41a1606d5b9624beebd215d780809f6a",
+    "l2ProxyErc20CodeHash": "0xbeb77e49c6506182ec0c02546aee9908aafc1561ec13beb488d14184c6cd1b79"
+  }
+}
