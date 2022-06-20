@@ -9,7 +9,9 @@ Then user can deposit token from layer 1 to layer 2, or withdraw token from laye
 ```
 yarn
 npx hardhat compile
-node scirpts/main.js
+<replace with your private key in .env file>
+<change your token config in main.js line 16-24>
+npx hardhat run scripts/main.js
 ```
 
-Change deploy config in main.js to deploy your token to Godwoken v0/v1.
+Change deploy config in [main.js](https://github.com/zhangyouxin/night-godwoken/blob/master/scripts/main.js#L16-L24) to deploy your token to Godwoken v0/v1.

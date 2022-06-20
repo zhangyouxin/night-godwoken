@@ -114,7 +114,7 @@ var layer2SudtScriptHash = utils.computeScriptHash(<Layer2SudtScript>)
 }
 ```
 
-有了 sudt id 之后可以使用 [合约](https://github.com/nervosnetwork/godwoken-polyjuice/blob/main/solidity/erc20/SudtERC20Proxy_UserDefinedDecimals.sol) 和 hardhat 来部署到链上：
+有了 sudt id 之后可以使用 [合约](https://github.com/nervosnetwork/godwoken-polyjuice/blob/main/solidity/erc20/SudtERC20Proxy_UserDefinedDecimals.sol) 和 hardhat 来部署到 Godwoken v1 链上：
 
 ```jsx
 // 合约部署需要填入 5 个参数
@@ -126,13 +126,14 @@ var layer2SudtScriptHash = utils.computeScriptHash(<Layer2SudtScript>)
 
 async function deploy() {
   const ERC20 = await hre.ethers.getContractFactory("ERC20");
-	// 这里注意 第四个参数填 sudt Id， decimals 填 18，其他随意
+  // 这里注意 第四个参数填 sudt Id
   const erc20 = await ERC20.deploy("TestToken", "TTN", 9999999999, "0x9fe", 18);
   await erc20.deployed();
   console.log("erc20 deployed to:", erc20.address);
 }
 ```
 
+注意！Godwoken v0 没有完全兼容 Ethereum，所以在部署合约的时候需要使用一些插件，使用详情：[链接](https://github.com/nervosnetwork/polyjuice-provider)
 
 上一步已经打印除了合约的地址，接下来可以查询余额：
 
